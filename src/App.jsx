@@ -1,7 +1,9 @@
+import Board from "./components/Board";
+
 function App() {
   return (
     <div>
-      <p className="text-red-500">Tic-Tac-Toe</p>
+      <Board></Board>
     </div>
   );
 }
