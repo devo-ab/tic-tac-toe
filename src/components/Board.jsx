@@ -1,27 +1,38 @@
+import { useState } from "react";
+
 export default function Board() {
-  function Square({value}) {
+  function Square() {
+    const [value, setValue] = useState(null);
+
+    function handleClick() {
+      setValue("X");
+    }
+
     return (
-      <button className="bg-white border-2 border-gray-400 h-12 w-12 m-1 leading-9 text-lg">
-        X
+      <button
+        onClick={handleClick}
+        className="bg-white border-2 border-gray-400 h-12 w-12 m-1 leading-9 text-lg"
+      >
+        {value}
       </button>
     );
   }
 
   return (
     <>
-      <div>
+      <div className="flex">
         <Square />
         <Square />
         <Square />
       </div>
 
-      <div>
+      <div className="flex">
         <Square />
         <Square />
         <Square />
       </div>
 
-      <div>
+      <div className="flex">
         <Square />
         <Square />
         <Square />
