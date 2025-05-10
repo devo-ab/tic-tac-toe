@@ -1,9 +1,10 @@
-import Board from "./components/Board";
+import Game from "./components/Game";
+
 
 function App() {
   return (
     <div>
-      <Board></Board>
+      <Game></Game>
     </div>
   );
 }
